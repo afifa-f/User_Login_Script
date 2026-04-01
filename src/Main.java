@@ -1,14 +1,13 @@
 void main() {
     Scanner scanner = new Scanner(System.in);
-    //Procedural log in script
 
     //hard coded username and password for testing purposes only
     String userName = "CrazyCray";
     String password = "HelloWorld!";
-    String enteredUserName;
-    String enteredPassword;
 
     boolean loggedIn = false;
+    String enteredUserName;
+    String enteredPassword;
     int failedAttempts = 0;
 
     //Log in loop will exit if correct password and username is entered or if wrong details have been entered 3 times
@@ -34,7 +33,7 @@ void main() {
             IO.println(userName + " has logged in");
             loggedIn = true;
         } else {
-            failedAttempts++; // tallies number of failed attempts
+            failedAttempts++;
             if (failedAttempts < 3) {
                 int attempts = 3 - failedAttempts;
                 IO.println("Incorrect username or password! " + attempts + " attempts remaining");
@@ -44,7 +43,7 @@ void main() {
 
     if (failedAttempts == 3) {
         IO.println("LOCKED OUT");
-    }
+    } //informing user of
 
     scanner.close();
 }
