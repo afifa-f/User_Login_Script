@@ -1,6 +1,8 @@
 void main() {
 
     //Procedural log in script
+
+    //hard coded username and password for testing purposes only
     String userName = "CrazyCray";
     String password = "HelloWorld!";
 
@@ -21,10 +23,13 @@ void main() {
             //
         } else {
             failedAttempts++; //tallies number of failed attempts
-            IO.println("Incorrect username or password!");
-            if (failedAttempts == 3) {
-                IO.println("LOCKED OUT");
+            if (failedAttempts < 3){
+                IO.println("Incorrect username or password!");
             }
         }
+    }
+
+    if (failedAttempts == 3) {
+        IO.println("LOCKED OUT");
     }
 }
